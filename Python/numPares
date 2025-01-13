@@ -1,0 +1,19 @@
+#Una funcion que reciba una lista de números y devuelva una lista de números pares.
+def listaNum():
+    lista = []
+    while True:
+        try: 
+            num = int(input("Ingrese la lista de números. Cuando ya no desee ingresar más ingrese 0 "))
+            if num == 0:
+                break
+            lista.append(num)
+        except ValueError:
+            print("No ingresó un número")
+    return lista
+def pares(lista):
+    pares = [n for n in lista if n % 2 == 0]
+    print(f"La lista de números pares es: {pares}")
+    return pares
+
+numeros = listaNum()
+pares = pares(numeros)
